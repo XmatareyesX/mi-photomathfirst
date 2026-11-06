@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  photomath-clone:
+    build: .
+    container_name: photomath_app
+    ports:
+      - "8501:8501"
+    environment:
+      # Reemplaza esto con tu clave gratuita de Google AI Studio
+      - GEMINI_API_KEY=AQ.Ab8RN6LU-vQrY3DQIRiXrvdjM2WZJ7t9RYyFiix0k6NV7A1hwQ
+    restart: unless-stopped
